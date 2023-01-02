@@ -162,6 +162,10 @@ main {
   letter-spacing: 0.08rem;
   cursor: pointer;
 }
+.card .btn-wrap #rating-submit-btn:hover:not(.disabled) {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
 .card .btn-wrap #rating-submit-btn.disabled {
   opacity: 0.2;
   cursor: default;
@@ -194,12 +198,12 @@ main {
   cursor: pointer;
 }
 .rating-score-btns .rating-score-btn.active input[type=radio] + label {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
-.rating-score-btns .rating-score-btn:hover:not(.active) input[type=radio] + label {
   background-color: var(--color-medium-gray);
   color: var(--color-deep-dark-blue);
+}
+.rating-score-btns .rating-score-btn:hover:not(.active) input[type=radio] + label {
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .card#rating-result {

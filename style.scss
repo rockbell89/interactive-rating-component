@@ -159,6 +159,10 @@ main {
       font-weight: var(--font-weight-bold);
       letter-spacing: 0.08rem;
       cursor: pointer;
+      &:hover:not(.disabled) {
+        background-color: var(--color-white);
+        color: var(--color-primary);
+      }
       &.disabled {
         opacity: 0.2;
         cursor: default;
@@ -194,16 +198,16 @@ main {
     &.active {
       input[type="radio"] {
         + label {
-          background-color: var(--color-primary);
-          color: var(--color-white);
+          background-color: var(--color-medium-gray);
+          color: var(--color-deep-dark-blue);
         }
       }
     }
     &:hover:not(.active) {
       input[type="radio"] {
         + label {
-          background-color: var(--color-medium-gray);
-          color: var(--color-deep-dark-blue);
+          background-color: var(--color-primary);
+          color: var(--color-white);
         }
       }
     }
