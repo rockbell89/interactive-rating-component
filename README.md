@@ -60,7 +60,8 @@ Use this section to recap over some of your major learnings while working throug
 
 To see how you can add code snippets, see below:
 
-HTMLCollection forEach
+**HTMLCollection forEach 
+https://daily-life-of-bigone.tistory.com/23
 ```js
 Array.prototype.forEach.call(ratingButtons.children, (btn) => {
   btn.classList.remove("active");
