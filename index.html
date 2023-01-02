@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <main>
+      <!-- Rating state start -->
+      <div class="card active" id="rating">
+        <div class="card-body">
+          <span class="icon icon-star"
+            ><img src="./images/icon-star.svg" alt="별 아이콘"
+          /></span>
+          <h1 class="title">How did we do?</h1>
+          <p>
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+          <div class="rating-score-btns">
+            <div class="rating-score-btn">
+              <input
+                type="radio"
+                id="rating_score_1"
+                name="rating_score"
+                value="1"
+              />
+              <label for="rating_score_1">1</label>
+            </div>
+            <div class="rating-score-btn">
+              <input
+                type="radio"
+                id="rating_score_2"
+                name="rating_score"
+                value="2"
+              />
+              <label for="rating_score_2">2</label>
+            </div>
+            <div class="rating-score-btn">
+              <input
+                type="radio"
+                id="rating_score_3"
+                name="rating_score"
+                value="3"
+              />
+              <label for="rating_score_3">3</label>
+            </div>
+            <div class="rating-score-btn">
+              <input
+                type="radio"
+                id="rating_score_4"
+                name="rating_score"
+                value="4"
+              />
+              <label for="rating_score_4">4</label>
+            </div>
+            <div class="rating-score-btn">
+              <input
+                type="radio"
+                id="rating_score_5"
+                name="rating_score"
+                value="5"
+              />
+              <label for="rating_score_5">5</label>
+            </div>
+          </div>
+          <div class="btn-wrap">
+            <button type="submit" id="rating-submit-btn" class="disabled">Submit</button>
+          </div>
+        </div>
+      </div>
+      <!-- Rating state end -->
+      <!-- Thank you state start -->
+      <div class="card" id="rating-result">
+        <div class="card-body">
+          <div class="illustration"></div>
+            <img
+              src="./images/illustration-thank-you.svg"
+              alt="일러스트 이미지"
+            />
+          </div>
+          <!-- Add rating here -->
+          <p class="selected-score-label">
+            You selected <span id="selected-score">0</span> out of 5
+          </p>
+          <h1 class="title">Thank you!</h1>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
+      </div>
+      <!-- Thank you state end -->
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

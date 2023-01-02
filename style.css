@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+/* minireset */
+blockquote,
+body,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+html,
+iframe,
+legend,
+li,
+ol,
+p,
+pre,
+textarea,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+:root {
+  --font-size-lg: 28px;
+  --font-size-md: 15px;
+  --font-size-sm: 14px;
+  --font-size-xs: 12px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --color-primary: hsl(25, 97%, 53%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-gray: hsl(217, 12%, 63%);
+  --color-medium-gray: hsl(216, 12%, 54%);
+  --color-dark-blue: hsl(213, 19%, 18%);
+  --color-deep-dark-blue: hsl(215, 27%, 12%);
+}
+
+body {
+  background-color: #141519;
+  font-family: "Overpass", sans-serif;
+  font-size: var(--font-size-md);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.card {
+  display: none;
+  width: 408px;
+  max-width: 100%;
+  min-height: 412px;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  background: rgb(35, 42, 50);
+  background: linear-gradient(180deg, var(--color-dark-blue) 0%, var(--color-deep-dark-blue) 100%);
+  color: var(--color-light-gray);
+}
+.card.active {
+  display: block;
+}
+.card .icon-star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--color-dark-blue);
+}
+.card .icon-star image {
+  width: 1rem;
+  height: 1rem;
+}
+.card h1.title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  margin: 2rem 0 1rem;
+}
+.card p {
+  margin: 1rem 0;
+  line-height: 1.65;
+}
+.card .btn-wrap {
+  margin: 1.5rem 0 0;
+}
+.card .btn-wrap #rating-submit-btn {
+  display: block;
+  width: 100%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem 0.5rem;
+  border-radius: 2.5rem;
+  text-transform: uppercase;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.08rem;
+  cursor: pointer;
+}
+.card .btn-wrap #rating-submit-btn.disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.rating-score-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.rating-score-btns .rating-score-btn {
+  display: inline-flex;
+}
+.rating-score-btns .rating-score-btn input[type=radio] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.rating-score-btns .rating-score-btn input[type=radio] + label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--color-dark-blue);
+  color: var(--color-light-gray);
+  cursor: pointer;
+}
+.rating-score-btns .rating-score-btn.active input[type=radio] + label {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.rating-score-btns .rating-score-btn:hover:not(.active) input[type=radio] + label {
+  background-color: var(--color-medium-gray);
+  color: var(--color-deep-dark-blue);
+}
+
+.card#rating-result {
+  text-align: center;
+}
+.card#rating-result .illustration {
+  display: block;
+  margin: 0.5rem 0;
+}
+.card#rating-result .illustration img {
+  width: 170px;
+}
+.card#rating-result .selected-score-label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 1.5rem 0 1rem;
+  background-color: var(--color-dark-blue);
+  border-radius: 2.5rem;
+  line-height: 1;
+}
+.card#rating-result h1 {
+  margin: 1rem 0;
+}
+
+/*# sourceMappingURL=style.css.map */
